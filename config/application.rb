@@ -6,6 +6,10 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+# Initialize dotenv
+Dotenv::Railtie.load
+HOSTNAME = ENV['HOSTNAME']
+
 module MealPalTracker
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
